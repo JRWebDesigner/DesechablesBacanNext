@@ -18,9 +18,7 @@ export default function Header() {
                 <nav className="border-gray-200 bg-black dark:border-gray-700">
                     <div className="max-w-screen-lg flex flex-wrap items-center justify-around mx-auto p-4">
                         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <a href="/">
                             <img src="/logo.png" className="h-36" alt="Flowbite Logo" />
-                            </a>
                         </Link>
                         <button data-collapse-toggle="navbar-multi-level" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false" onClick={navMobileControl}>
                             <span className="sr-only">Open main menu</span>
@@ -32,7 +30,7 @@ export default function Header() {
                             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:border-gray-700">
                                 <li>
                                     <Link href="/" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 hover:text-blue-600 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">
-                                    <a href="/">Inicio</a>
+                                    Inicio
                                     </Link>
                                 </li>
                                 <li>

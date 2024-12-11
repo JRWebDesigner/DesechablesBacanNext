@@ -1,5 +1,9 @@
+import Script from "next/script";
+import { NextUIProvider } from '@nextui-org/react';
 import localFont from "next/font/local";
+import Header from '../components/Header'
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,11 +23,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header />
         {children}
+        <Script src="./scripts/animation.js" />
+        <Footer />
       </body>
     </html>
   );

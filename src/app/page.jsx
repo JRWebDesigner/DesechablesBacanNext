@@ -1,0 +1,170 @@
+
+export default function Home() {
+  return (
+    <>
+      <section className="p-16 flex justify-center items-center flex-wrap gap-10 bg-blue-500 rounded-b-full">
+        <h1 className="inline text-center text-4xl font-black text-white">Desechables Bacan: Productos de Calidad para Todas tus Necesidades</h1>
+        <div className=" p-2 rounded-full flex justify-center items-center">
+          <img className="desch_image w-full h-full object-contain" src="/banner.png" alt="as" />
+        </div>
+      </section>
+      <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+        Nuestras Marcas
+      </h2>
+
+      <section className="marcs lg:grid grid-cols-5 lg:place-items-center flex justify-center flex-wrap m-auto bg-orange-600 py-14 gap-5 px-[10%]">
+        <img className="opacity-35 translate-y-14 scale-50 duration-[300ms]" width="150px" src="/marcas/advan.png" alt="logo advan" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[400ms]" width="150px" src="/marcas/belen.png" alt="logo belen" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[500ms]" width="150px" src="/marcas/darnel.png" alt="logo darnel" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[600ms]" width="150px" src="/marcas/delsur.png" alt="logo delsur" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[700ms]" width="150px" src="/marcas/docplast.png" alt="logo docplast" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[800ms]" width="150px" src="/marcas/fivestick.png" alt="logo fivestick" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[900ms]" width="150px" src="/marcas/feiteng.png" alt="logo feiteng" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[1000ms]" width="150px" src="/marcas/isoplast.png" alt="logo isoplast" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[1100ms]" width="150px" src="/marcas/pastenplasy.png" alt="logo pastenplasy" />
+        <img className="opacity-35 translate-y-14 scale-50 duration-[1200ms]" width="150px" src="/marcas/sanjorge.png" alt="logo sanjorge" />
+      </section>
+      <div className="flex justify-center items-center flex-wrap p-16">
+        <div className="md:w-[60%] grid place-items-center">
+
+          <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+            Envases
+          </h2>
+          <p className="m-auto text-center">
+            Encuentra los mejores envases desechables en Desechables Bacán. Ofrecemos una amplia variedad de opciones ecológicas, resistentes y prácticas para alimentos. Ideales para negocios, eventos y uso personal. ¡Calidad y funcionalidad al mejor precio!
+          </p>
+        </div>
+        <div id="indicators-carousel" className="relative min-w-[350px] w-[40%] m-auto opacity-35 translate-y-14 duration-500" data-carousel="static">
+          <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+          </div>
+          <div className="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div className="flex justify-center items-center flex-wrap-reverse p-16">
+        <div id="indicators-carousel" className="relative min-w-[350px] w-[40%] m-auto opacity-35 translate-y-14 duration-500" data-carousel="static">
+          <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+          </div>
+          <div className="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+        <div className="md:w-[60%] grid place-items-center">
+
+          <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+            Vasos
+          </h2>
+          <p className="m-auto text-center">
+            Vasos desechables de calidad en Desechables Bacán. Disponibles en diversos tamaños y materiales, ideales para bebidas calientes y frías. Perfectos para restaurantes, cafeterías, eventos o uso personal. ¡Practicidad, resistencia y precio justo!
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-center items-center flex-wrap p-16">
+        <div className="md:w-[60%] grid place-items-center">
+
+          <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+            Bolsas
+          </h2>
+          <p className="m-auto text-center">
+            Bolsas desechables en Desechables Bacan. Ofrecemos bolsas resistentes, prácticas y en diferentes tamaños, ideales para negocios, eventos y uso diario. Disponibles en materiales ecológicos y biodegradables. ¡Calidad y funcionalidad garantizadas!
+          </p>
+        </div>
+        <div id="indicators-carousel" className="relative min-w-[350px] w-[40%] m-auto opacity-35 translate-y-14 duration-500" data-carousel="static">
+          <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+            <div className="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm1qfVEDF5Y7wRUWeMWHUhhMR8RrRMyz7UvvngOFJ8Rq8lKS_p2ed1oJpzig3vJY3ukuA&usqp=CAU" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            </div>
+          </div>
+          <div className="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+          <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4" />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4" />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,61 +1,7 @@
-"use client"
-import { useEffect } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import Link from "next/link";
 import Script from "next/script";
 export default function Layout({ children }) {
-	useEffect(() => {
-    const translates = document.querySelectorAll('.translate-y-14');
-    const scales = document.querySelectorAll('.scale-50');
-    
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
-
-    const Atranslate = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('translate-y-14');
-          entry.target.classList.remove('opacity-35');
-        }
-      });
-    };
-
-    const Ascale = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('scale-50');
-          entry.target.classList.remove('-translate-x-[30%]');
-        }
-      });
-    };
-
-    const Ascaleof = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('scale-50');
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(Atranslate, options);
-    const observerS = new IntersectionObserver(Ascale, options);
-    const observerSo = new IntersectionObserver(Ascaleof, options);
-
-    translates.forEach((translate) => observer.observe(translate));
-    scales.forEach((scale) => {
-      observerS.observe(scale);
-      observerSo.observe(scale);
-    });
-
-    return () => {
-      observer.disconnect();
-      observerS.disconnect();
-      observerSo.disconnect();
-    };
-  }, []);
 	return (
 		<div className="max-w-screen-lg mx-auto mt-20">
 			<nav className="w-[80%] md:w-[50%] mx-auto">

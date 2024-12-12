@@ -57,34 +57,34 @@ export default function Marks(){
     return(
         <>
             <ImagesMarks 
-                name='advan'
+                name='Advan'
             />
             <ImagesMarks 
-                name='belen'
+                name='Belen'
             />
             <ImagesMarks 
-                name='darnel'
+                name='Darnel'
             />
             <ImagesMarks 
-                name='delSur'
+                name='DelSur'
             />
             <ImagesMarks 
-                name='docplast'
+                name='Docplast'
             />
             <ImagesMarks 
-                name='fiveStick'
+                name='FiveStick'
             />
             <ImagesMarks 
-                name='feiteng'
+                name='Feiteng'
             />
             <ImagesMarks 
-                name='isoplast'
+                name='Isoplast'
             />
             <ImagesMarks 
-                name='pastenPlast'
+                name='PastenPlast'
             />
             <ImagesMarks 
-                name='sanJorge'
+                name='SanJorge'
             />
         </>
     )

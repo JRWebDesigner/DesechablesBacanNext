@@ -1,4 +1,5 @@
 "use client"
+import Marks from '@/components/Marks';
 import { useEffect } from 'react';
 
 export default function Home() {
@@ -65,22 +66,11 @@ export default function Home() {
       <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
         Nuestras Marcas
       </h2>
-
-      <section className="marcs lg:grid grid-cols-5 lg:place-items-center flex justify-center flex-wrap m-auto bg-orange-600 py-14 gap-5 px-[10%]">
-        <img className="opacity-35 translate-y-14 scale-50 duration-[300ms]" width="150px" src="/marcas/advan.png" alt="logo advan" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[400ms]" width="150px" src="/marcas/belen.png" alt="logo belen" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[500ms]" width="150px" src="/marcas/darnel.png" alt="logo darnel" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[600ms]" width="150px" src="/marcas/delsur.png" alt="logo delsur" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[700ms]" width="150px" src="/marcas/docplast.png" alt="logo docplast" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[800ms]" width="150px" src="/marcas/fivestick.png" alt="logo fivestick" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[900ms]" width="150px" src="/marcas/feiteng.png" alt="logo feiteng" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[1000ms]" width="150px" src="/marcas/isoplast.png" alt="logo isoplast" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[1100ms]" width="150px" src="/marcas/pastenplasy.png" alt="logo pastenplasy" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[1200ms]" width="150px" src="/marcas/sanjorge.png" alt="logo sanjorge" />
+      <section className="marcs lg:grid grid-cols-5 lg:place-items-center flex justify-center flex-wrap m-auto bg-gradient-to-t to-orange-600 from-yellow-400 py-14 gap-5 px-[10%]">
+        <Marks />
       </section>
       <div className="flex justify-center items-center flex-wrap p-16">
         <div className="md:w-[60%] grid place-items-center">
-
           <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
             Envases
           </h2>

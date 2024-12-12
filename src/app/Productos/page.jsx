@@ -53,7 +53,7 @@ export default function Productos() {
       observerS.disconnect();
       observerSo.disconnect();
     };
-  }, []);  
+  }, []);
   return (
         <>
 			<h1 className="text-center uppercase font-bold text-3xl mt-10">Todos nuestros productos</h1>

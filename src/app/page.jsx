@@ -1,23 +1,6 @@
 "use client"
-import { useKeenSlider } from "keen-slider/react"
-import "keen-slider/keen-slider.min.css"
 import Marks from '@/components/Marks';
 import { useEffect } from 'react';
-const carousel = (slider) => {
-  const z = 300
-  function rotate() {
-    const deg = 360 * slider.track.details.progress
-    slider.container.style.transform = `translateZ(-${z}px) rotateY(${-deg}deg)`
-  }
-  slider.on("created", () => {
-    const deg = 360 / slider.slides.length
-    slider.slides.forEach((element, idx) => {
-      element.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`
-    })
-    rotate()
-  })
-  slider.on("detailsChanged", rotate)
-}
 export default function Home() {
   useEffect(() => {
     const translates = document.querySelectorAll('.translate-y-14');
@@ -71,15 +54,7 @@ export default function Home() {
       observerSo.disconnect();
     };
   }, []);
-  const [sliderRef] = useKeenSlider(
-    {
-      loop: true,
-      selector: ".carousel__cell",
-      renderMode: "custom",
-      mode: "free-snap",
-    },
-    [carousel]
-  )
+
   return (
     <>
       <section className="p-16 flex justify-center items-center flex-wrap gap-10 bg-blue-500 rounded-b-full">
@@ -103,18 +78,6 @@ export default function Home() {
           <p className="m-auto text-center">
             Encuentra los mejores envases desechables en Desechables Bacán. Ofrecemos una amplia variedad de opciones ecológicas, resistentes y prácticas para alimentos. Ideales para negocios, eventos y uso personal. ¡Calidad y funcionalidad al mejor precio!
           </p>
-        </div>
-          <div className="wrapper">
-            <div className="scene">
-            <div className="carousel keen-slider" ref={sliderRef}>
-              <div className="carousel__cell number-slide1">1</div>
-              <div className="carousel__cell number-slide2">2</div>
-              <div className="carousel__cell number-slide3">3</div>
-              <div className="carousel__cell number-slide4">4</div>
-              <div className="carousel__cell number-slide5">5</div>
-              <div className="carousel__cell number-slide6">6</div>
-            </div>
-          </div>
         </div>
       </div>
       <div className="flex justify-center items-center flex-wrap-reverse p-16">

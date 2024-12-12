@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Layout({ children }) {
 	return (
 		<>
-		<div className="max-w-screen-lg mx-auto mt-20">
+		<div className="max-w-screen-2xl mx-auto mt-20">
 			<nav className="w-[80%] md:w-[50%] mx-auto">
 				<div className="border-2 before:border-black text-xl rounded-lg">
 				<Accordion>
@@ -29,9 +29,7 @@ export default function Layout({ children }) {
 				</Accordion>
 				</div>
 			</nav>
-			<main>
 				{children}
-			</main>
 		</div>
 		</>
 	)

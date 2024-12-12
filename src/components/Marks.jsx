@@ -66,7 +66,7 @@ export default function Marks(){
                 name='darnel'
             />
             <ImagesMarks 
-                name='delsur'
+                name='delSur'
             />
             <ImagesMarks 
                 name='docplast'
@@ -86,16 +86,6 @@ export default function Marks(){
             <ImagesMarks 
                 name='sanJorge'
             />
-            
-            {/* 
-        <img className="opacity-35 translate-y-14 scale-50 duration-[500ms]" width="150px" src="/marcas/darnel.png" alt="logo darnel" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[600ms]" width="150px" src="/marcas/delsur.png" alt="logo delsur" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[700ms]" width="150px" src="/marcas/docplast.png" alt="logo docplast" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[800ms]" width="150px" src="/marcas/fivestick.png" alt="logo fivestick" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[900ms]" width="150px" src="/marcas/feiteng.png" alt="logo feiteng" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[1000ms]" width="150px" src="/marcas/isoplast.png" alt="logo isoplast" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[1100ms]" width="150px" src="/marcas/pastenplasy.png" alt="logo pastenplasy" />
-        <img className="opacity-35 translate-y-14 scale-50 duration-[1200ms]" width="150px" src="/marcas/sanjorge.png" alt="logo sanjorge" /> */}
         </>
     )
 }

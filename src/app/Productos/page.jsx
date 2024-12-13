@@ -57,12 +57,12 @@ export default function Productos() {
   return (
         <>
 			<h1 className="text-center uppercase font-bold text-3xl mt-10">Todos nuestros productos</h1>
-            <div className="flex flex-row-reverse flex-wrap justify-center items-center gap-7 m-10">
+            <div className="flex flex-row-reverse flex-wrap justify-center items-center gap-16 m-10">
             {
                 products.map((prod)=>(
                     <div 
       key={prod.id} 
-      className="flex flex-col justify-center items-center border-blue-950 border-2 w-[240px] p-4 text-xl font-bold gap-3 rounded-3xl hover:scale-[1.05] hover:bg-gray-100 duration-500 translate-y-14 scale-50"
+      className="flex flex-col justify-center items-center shadow-xl w-[240px] p-4 text-xl font-bold gap-3 rounded-3xl hover:scale-[1.05] hover:bg-gray-100 duration-500 translate-y-14 scale-50"
     >
       <img 
         src={prod.img} 

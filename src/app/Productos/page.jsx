@@ -109,7 +109,7 @@ export default function Productos() {
                 Cerrar
               </button>
               <a
-              href={`https://wa.me/+59168071168?text=Hola!%20Estoy%20interesado%20en%20${selectedProduct.name}`}
+              href={`https://wa.me/+59168071168?text=Hola!%20Estoy%20interesado%20en%20${selectedProduct.name}%20,marca%20${selectedProduct.mark}`}
               target='_blank'
                 onClick={closeModal}
                 className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"

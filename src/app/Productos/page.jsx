@@ -80,6 +80,7 @@ export default function Productos() {
           >
             <img src={prod.img} alt={prod.name} />
             <span>{prod.name}</span>
+            <small>{prod.price}Bs.</small>
             <small className="text-black uppercase">{prod.mark}</small>
           </div>
         ))}

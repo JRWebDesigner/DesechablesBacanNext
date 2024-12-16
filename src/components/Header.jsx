@@ -29,7 +29,7 @@ export default function Header() {
                         <div className={`${activeStyles} w-full md:block md:w-auto`} id="navbar-multi-level">
                             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:border-gray-700">
                                 <li>
-                                    <Link href="/" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:p-0 hover:text-blue-600 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">
+                                    <Link href="/" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700" aria-current="page">
                                     Inicio
                                     </Link>
                                 </li>

@@ -27,7 +27,7 @@ export default function Contactos(){
                         </a>
                     </li>
                 </ul>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.3362451564312!2d-68.1622087!3d-16.509113899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edfa142489865%3A0x8103908d274ec4c0!2sDesechable%20CH&#39;PLAST!5e0!3m2!1ses-419!2sbo!4v1733948839199!5m2!1ses-419!2sbo" className=" mt-6 mx-auto rounded-2xl" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.3362451564312!2d-68.1622087!3d-16.509113899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edfa142489865%3A0x8103908d274ec4c0!2sDesechable%20CH&#39;PLAST!5e0!3m2!1ses-419!2sbo!4v1733948839199!5m2!1ses-419!2sbo" className="md:w-[600px] md:h-[450px] w-[90%] mt-6 mx-auto rounded-2xl" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg">

@@ -80,8 +80,13 @@ export default function Productos() {
           >
             <img src={prod.img} alt={prod.name} />
             <span>{prod.name}</span>
-            <small>{prod.price}Bs.</small>
             <small className="text-black uppercase">{prod.mark}</small>
+            <div className="flex justify-around items-center">
+              <small>{prod.price}Bs.</small>
+              <button className="bg-blue-400 p-4"> 
+                Añadir
+              </button>
+            </div>
           </div>
         ))}
       </div>
@@ -102,7 +107,7 @@ export default function Productos() {
               {selectedProduct.descrip}
               </p>
             </div>
-            <div className="mt-4 flex justify-end">
+            <div className="mt-4 flex justify-around gap-10">
               <button
                 onClick={closeModal}
                 className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"

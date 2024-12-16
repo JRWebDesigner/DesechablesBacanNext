@@ -11,7 +11,7 @@ export default function Contactos(){
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold text-blue-800 mb-4">Información de Contacto</h2>
-                <p className="text-gray-600 mb-4">Estamos ubicados en Caranavi, corazón del paraíso yungueño a orillas del Rio Yara. Contáctanos por cualquiera de los medios disponibles.</p>
+                <p className="text-gray-600 mb-4">Estamos ubicados en la ciudad de El Alto, calle 4 Villa Dolores. Contáctanos por cualquiera de los medios disponibles.</p>
                 <ul className="flex justify-center items-center flex-col">
                     <li className="w-[90%]">
                        <a href="https://maps.app.goo.gl/AxrVpc1vW1mtBNYE7"><strong>Dirección: </strong> Calle 4 Villa Dolores, <br /> El Alto, Bolivia</a>

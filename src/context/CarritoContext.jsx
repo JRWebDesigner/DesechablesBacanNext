@@ -1,20 +1,27 @@
-// CarritoContext.js
-"use client";
-import React, { createContext, useContext, useState } from "react";
 
-// Crear el contexto
+"use client";
+import React, { createContext, useContext, useState, useEffect } from "react";
+
 const CarritoContext = createContext();
 
-// Proveedor del contexto
 export const CarritoProvider = ({ children }) => {
   const [carrito, setCarrito] = useState([]);
 
-  // Función para añadir productos al carrito
+  useEffect(() => {
+    const carritoGuardado = localStorage.getItem("carrito");
+    if (carritoGuardado) {
+      setCarrito(JSON.parse(carritoGuardado)); // Inicializa el carrito con los datos guardados
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
+
   const añadirAlCarrito = (producto) => {
     setCarrito((prevCarrito) => [...prevCarrito, producto]);
   };
 
-  // Función para eliminar un producto del carrito
   const eliminarDelCarrito = (id) => {
     setCarrito((prevCarrito) => prevCarrito.filter((producto) => producto.id !== id));
   };
@@ -26,7 +33,6 @@ export const CarritoProvider = ({ children }) => {
   );
 };
 
-// Hook personalizado para acceder al contexto
 export const useCarrito = () => {
   return useContext(CarritoContext);
 };

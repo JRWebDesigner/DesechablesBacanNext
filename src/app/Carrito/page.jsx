@@ -8,10 +8,7 @@ export default function Carrito() {
     eliminarDelCarrito(id);
   };
   const total=carrito.reduce((total, producto) => total + producto.price, 0)
-  let messageP=''
-  for(let i=0;i<carrito.length;i++){
-    messageP+=' -'+carrito[i].name+"%0A"
-  }
+  const messageP = carrito.map(producto => ` -${producto.name}%0A`).join('');
   const message='Buenas,%20desearia%20estos%20productos%0A'+messageP
   return (
     <div className="p-8">

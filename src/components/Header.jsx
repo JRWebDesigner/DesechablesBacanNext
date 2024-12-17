@@ -18,7 +18,7 @@ export default function Header() {
                 <nav className="border-gray-200 bg-black dark:border-gray-700">
                     <div className="max-w-screen-lg flex flex-wrap items-center justify-around mx-auto p-4">
                         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="/logo.png" className="h-36" alt="Flowbite Logo" />
+                            <img src="/logo.png" className="h-28 md:h-36" alt="Flowbite Logo" />
                         </Link>
                         <button data-collapse-toggle="navbar-multi-level" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false" onClick={navMobileControl}>
                             <span className="sr-only">Open main menu</span>

@@ -66,7 +66,7 @@ export default function Carrito() {
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-6 text-center">Carrito de Compras</h1>
       {carrito.length === 0 ? (
-        <p>Tu carrito está vacío.</p>
+        <p className="block text-center text-2xl">Tu carrito está vacío.</p>
       ) : (
         <ul className="space-y-4 w-[90%] m-auto">
           {carrito.map((producto) => (

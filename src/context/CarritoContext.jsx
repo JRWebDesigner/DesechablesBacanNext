@@ -10,7 +10,7 @@ export const CarritoProvider = ({ children }) => {
   useEffect(() => {
     const carritoGuardado = localStorage.getItem("carrito");
     if (carritoGuardado) {
-      setCarrito(JSON.parse(carritoGuardado)); // Inicializa el carrito con los datos guardados
+      setCarrito(JSON.parse(carritoGuardado));
     }
   }, []);
 
@@ -26,8 +26,13 @@ export const CarritoProvider = ({ children }) => {
     setCarrito((prevCarrito) => prevCarrito.filter((producto) => producto.id !== id));
   };
 
+  const vaciarCarrito = () => {
+    setCarrito([]);
+  };
   return (
-    <CarritoContext.Provider value={{ carrito, añadirAlCarrito, eliminarDelCarrito }}>
+    <CarritoContext.Provider
+      value={{ carrito, añadirAlCarrito, eliminarDelCarrito, vaciarCarrito }}
+    >
       {children}
     </CarritoContext.Provider>
   );

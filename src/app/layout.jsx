@@ -1,4 +1,5 @@
-import { NextUIProvider } from '@nextui-org/react';
+
+import { CarritoProvider } from "../context/CarritoContext";
 import localFont from "next/font/local";
 import Header from '../components/Header'
 import "./globals.css";
@@ -23,6 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   
   return (
+    <CarritoProvider>
     <html lang="es">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -34,5 +36,6 @@ export default function RootLayout({ children }) {
         <Footer />
       </body>
     </html>
+    </CarritoProvider>
   );
 }

@@ -1,7 +1,7 @@
+
 "use client";
 import { useEffect   } from "react";
-import { useCarrito } from "@/context/CarritoContext"; // Importa el hook
-
+import { useCarrito } from "@/context/CarritoContext"; 
 export default function Carrito() {
   const { carrito, eliminarDelCarrito, vaciarCarrito  } = useCarrito();
   const handleEliminar = (id) => {

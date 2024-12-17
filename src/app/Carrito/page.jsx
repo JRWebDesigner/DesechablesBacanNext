@@ -13,57 +13,6 @@ export default function Carrito() {
     messageP+=' -'+carrito[i].name+"%0A"
   }
   const message='Buenas,%20desearia%20estos%20productos%0A'+messageP
-  useEffect(() => {
-      const translates = document.querySelectorAll('.translate-y-14');
-      const scales = document.querySelectorAll('.scale-50');
-      const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5,
-      };
-  
-      const Atranslate = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('translate-y-14');
-            entry.target.classList.remove('opacity-35');
-          }
-        });
-      };
-  
-      const Ascale = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('scale-50');
-            entry.target.classList.remove('-translate-x-[30%]');
-          }
-        });
-      };
-  
-      const Ascaleof = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.remove('scale-50');
-          }
-        });
-      };
-  
-      const observer = new IntersectionObserver(Atranslate, options);
-      const observerS = new IntersectionObserver(Ascale, options);
-      const observerSo = new IntersectionObserver(Ascaleof, options);
-  
-      translates.forEach((translate) => observer.observe(translate));
-      scales.forEach((scale) => {
-        observerS.observe(scale);
-        observerSo.observe(scale);
-      });
-  
-      return () => {
-        observer.disconnect();
-        observerS.disconnect();
-        observerSo.disconnect();
-      };
-    }, []); 
   return (
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-6 text-center">Carrito de Compras</h1>
@@ -72,7 +21,7 @@ export default function Carrito() {
       ) : (
         <ul className="space-y-4 w-[90%] m-auto">
           {carrito.map((producto) => (
-            <li key={producto.id} className="flex items-center justify-between border-b pb-4 duration-500 translate-y-14 mt-4">
+            <li key={producto.id} className="flex items-center justify-between border-b pb-4 duration-500 mt-4">
               <div className="flex items-center gap-4">
                 <img
                   src={producto.img}
@@ -94,7 +43,6 @@ export default function Carrito() {
           ))}
         </ul>
       )}
-      {carrito.length > 0 && (
         <div className="flex flex-col justify-center items-center">
         <button
           onClick={vaciarCarrito}
@@ -111,9 +59,7 @@ export default function Carrito() {
           COMPRAR AHORA
         </a>
         </div>
-        </div>
-      )}
-      
+        </div>      
     </div>
   );
 }

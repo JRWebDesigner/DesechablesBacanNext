@@ -1,5 +1,5 @@
 
-import { CarritoProvider } from "../context/CarritoContext";
+import { CarritoProvider } from "@/context/CarritoContext";
 import localFont from "next/font/local";
 import Header from '../components/Header'
 import "./globals.css";

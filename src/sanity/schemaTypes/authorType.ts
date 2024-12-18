@@ -1,39 +1,28 @@
-import {UserIcon} from '@sanity/icons'
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
 export const authorType = defineType({
-  name: 'author',
-  title: 'Author',
+  name: 'Marca',
+  title: 'Marca',
   type: 'document',
-  icon: UserIcon,
   fields: [
     defineField({
       name: 'name',
       type: 'string',
     }),
     defineField({
-      name: 'slug',
-      type: 'slug',
+      name: "image",
+      title: "Image",
+      type: "image",
       options: {
-        source: 'name',
+        hotspot: true, // Permite recortar la imagen
       },
-    }),
-    defineField({
-      name: 'image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'bio',
-      type: 'array',
-      of: [
-        defineArrayMember({
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        }),
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+          description: "Texto alternativo para la accesibilidad.",
+        },
       ],
     }),
   ],

@@ -97,11 +97,10 @@ export default function Productos() {
       </div>
       {modalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 overflow-y-auto">
-
           <div className="relative bg-white p-6 rounded-lg shadow-lg flex flex-wrap justify-center items-center gap-7">
           <button
                 onClick={closeModal}
-                className="bg-gray-200 top-2 right-2 text-2xl px-4 py-2 rounded-full hover:bg-red-600 absolute"
+                className="bg-gray-200 top-2 right-2 text-2xl px-4 py-2 rounded-full hover:bg-red-600 absolute hover:text-white"
               >
                 X
               </button>
@@ -122,16 +121,16 @@ export default function Productos() {
             <div className="mt-4 flex justify-around gap-10">
               <button
                 onClick={() => {añadirAlCarrito(selectedProduct); aniadido()} }
-                className="bg-blue-400 px-4 py-2 text-sm rounded-full hover:scale-105 text-white"> 
-                Añadir
+                className="flex justify-center items-center bg-blue-600 px-4 py-2 text-sm rounded-full hover:scale-105 text-white"> 
+                Añadir <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
               </button>
               <a
               href={`https://wa.me/+59163524798?text=Hola!%20Estoy%20interesado%20en%20${selectedProduct.name}%20,marca%20${selectedProduct.mark}`}
               target='_blank'
                 onClick={closeModal}
-                className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600"
+                className="flex justify-center items-center bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600"
               >
-                Comprar
+                Comprar <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l5 5l10 -10" /></svg>
               </a>
             </div>
             

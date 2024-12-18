@@ -69,7 +69,7 @@ export default function Carrito() {
       {carrito.length === 0 ? (
         <div className="flex justify-center items-center flex-col gap-10">
           <p className="block text-center text-2xl">Tu carrito está vacío.</p>
-          <Link href="/Productos" className="Btn_animation px-4 py-2 bg-green-500 font-bold w-[20%] uppercase rounded-full text-center text-white">Llenar Carrito</Link>
+          <Link href="/Productos" className="Btn_animation px-4 py-2 bg-green-500 font-bold md:w-[20%] uppercase rounded-full text-center text-white">Llenar Carrito</Link>
         </div>
       ) : (
         <ul className="space-y-4 w-[90%] m-auto">

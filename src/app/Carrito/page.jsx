@@ -104,12 +104,12 @@ export default function Carrito() {
         >
           Vaciar Carrito <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M13 17h-7v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /><path d="M22 22l-5 -5" /><path d="M17 22l5 -5" /></svg>
         </button>
-        <div className="flex items-center justify-center mt-10 gap-10">
-        <h2 className="text-center text-xl font-semibold">
+        <div className="flex items-center justify-center mt-10 gap-5 md:gap-10">
+        <h2 className="text-center text-lg md:text-xl font-semibold">
         Total: {total} Bs.
       </h2>
         <a href={`https://wa.me/+59163524798?text=${message}`}
-              target='_blank' className="bg-green-500 p-2 text-white rounded-full hover:bg-green-600 flex justify-center items-center">
+              target='_blank' className="bg-green-500 p-2 text-white rounded-full hover:bg-green-600 flex justify-center items-center text-sm md:text-lg">
           COMPRAR AHORA <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round"  className="icon icon-tabler icons-tabler-outline icon-tabler-camper"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M15 18a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M5 18h-1a1 1 0 0 1 -1 -1v-11a2 2 0 0 1 2 -2h12a4 4 0 0 1 4 4h-18" /><path d="M9 18h6" /><path d="M19 18h1a1 1 0 0 0 1 -1v-4l-3 -5" /><path d="M21 13h-7" /><path d="M14 8v10" /></svg>
         </a>
         </div>

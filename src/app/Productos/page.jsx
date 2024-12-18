@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState,useContext } from 'react'
 import products from './products.json'
-import { useCarrito } from "@/context/CarritoContext";
+import { useCarrito } from "../../context/CarritoContext";
 export default function Productos() {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -119,9 +119,9 @@ export default function Productos() {
               {selectedProduct.descrip}
               </p>
             </div>
-            <div onClick={()=>aniadido()} className="mt-4 flex justify-around gap-10">
+            <div className="mt-4 flex justify-around gap-10">
               <button
-                onClick={() => añadirAlCarrito(selectedProduct)}
+                onClick={() => {añadirAlCarrito(selectedProduct); aniadido()} }
                 className="bg-blue-400 px-4 py-2 text-sm rounded-full hover:scale-105 text-white"> 
                 Añadir
               </button>

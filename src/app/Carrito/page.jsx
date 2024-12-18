@@ -1,7 +1,8 @@
 
 "use client";
+import Link from "next/link";
 import { useEffect   } from "react";
-import { useCarrito } from "@/context/CarritoContext"; 
+import { useCarrito } from "../../context/CarritoContext"; 
 export default function Carrito() {
   const { carrito, eliminarDelCarrito, vaciarCarrito  } = useCarrito();
   const handleEliminar = (id) => {
@@ -63,10 +64,13 @@ export default function Carrito() {
     };
   }, []);
   return (
-    <div className="p-8">
+    <div className="p-8 min-h-[70dvh]">
       <h1 className="text-3xl font-bold mb-6 text-center">Carrito de Compras</h1>
       {carrito.length === 0 ? (
-        <p className="block text-center text-2xl">Tu carrito está vacío.</p>
+        <div className="flex justify-center items-center flex-col gap-10">
+          <p className="block text-center text-2xl">Tu carrito está vacío.</p>
+          <Link href="/Productos" className="Btn_animation px-4 py-2 bg-green-500 font-bold w-[20%] uppercase rounded-full text-center text-white">Llenar Carrito</Link>
+        </div>
       ) : (
         <ul className="space-y-4 w-[90%] m-auto">
           {carrito.map((producto) => (
@@ -102,7 +106,7 @@ export default function Carrito() {
         </button>
         <div className="flex items-center justify-center mt-10 gap-10">
         <h2 className="text-center text-xl font-semibold">
-        Total: {total}
+        Total: {total} Bs.
       </h2>
         <a href={`https://wa.me/+59163524798?text=${message}`}
               target='_blank' className="bg-green-500 p-2 text-white rounded-full">

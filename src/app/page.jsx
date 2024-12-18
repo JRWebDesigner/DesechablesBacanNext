@@ -1,6 +1,6 @@
 "use client"
-import Marks from '@/components/Marks';
-import Carousel from "@/components/PhotoCarousel";
+import Marks from '../components/Marks';
+import Carousel from "../components/PhotoCarousel";
 import { useEffect } from 'react';
 export default function Home() {
   useEffect(() => {

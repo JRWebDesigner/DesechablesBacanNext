@@ -10,7 +10,7 @@ export default function Header() {
         setIsNavOpen(!isNavOpen);
     };
 
-    const activeStyles = isNavOpen ? '' : 'hidden';
+    const activeStyles = isNavOpen ? 'w-[90%]' : 'hidden';
 
     return (
         <>
@@ -20,7 +20,7 @@ export default function Header() {
                         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                             <img src="/logo.png" className="h-28 md:h-36" alt="Flowbite Logo" />
                         </Link>
-                        <div className="flex justify-end gap-6">
+                        <div className="flex items-center justify-end gap-6">
                         <Link href='/Carrito'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="#fff" className=" md:hidden icon icon-tabler icons-tabler-filled icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z" /></svg>
                         </Link>
@@ -31,18 +31,18 @@ export default function Header() {
                             </svg>
                         </button>
                         </div>
-                        <div className={`${activeStyles} w-full md:block md:w-auto`} id="navbar-multi-level">
-                            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:border-gray-700">
+                        <div className={`${activeStyles} w-full hidden md:block md:w-auto`} id="navbar-multi-level">
+                            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:border-gray-700 ">
                                 <li>
-                                    <Link href="/" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700" aria-current="page">
+                                    <Link href="/" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700 " aria-current="page">
                                     Inicio
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/Productos" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700">Productos</Link>
                                 </li>
-                                <li className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700">
-                                    <Link href="/Carrito">Mi Carrito</Link>
+                                <li>
+                                    <Link href="/Carrito"  className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700 ">Mi Carrito</Link>
                                 </li>
                                 <li>
                                     <Link href="/Contactos" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700">Contactos</Link>
@@ -56,6 +56,27 @@ export default function Header() {
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="rgb(29 78 216)" className="hidden md:inline icon icon-tabler icons-tabler-filled icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z" /></svg>
                         </Link>
                     </div>
+                    <div className={`${activeStyles} w-full md:hidden md:w-auto`} id="navbar-multi-level">
+                            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-black md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-black dark:border-gray-700">
+                                <li>
+                                    <Link href="/" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700 text-right" aria-current="page">
+                                    Inicio
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/Productos" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700 text-right">Productos</Link>
+                                </li>
+                                <li>
+                                    <Link href="/Carrito"  className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700 text-right">Mi Carrito</Link>
+                                </li>
+                                <li>
+                                    <Link href="/Contactos" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700 text-right">Contactos</Link>
+                                </li>
+                                <li>
+                                    <Link href="/studio" className="block py-2 px-3 text-white bg-transparent rounded md:bg-transparent md:p-0 md:dark:bg-transparent dark:hover:bg-gray-700 text-right">Inicio Sesión</Link>
+                                </li>
+                            </ul>
+                        </div>
                 </nav>
             </header>
         </>

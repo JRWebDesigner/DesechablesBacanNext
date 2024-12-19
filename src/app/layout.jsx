@@ -22,7 +22,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
   return (
     <CarritoProvider>
     <html lang="es">

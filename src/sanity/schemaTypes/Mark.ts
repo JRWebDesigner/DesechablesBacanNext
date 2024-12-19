@@ -1,6 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
-export const authorType = defineType({
+export const Marks = defineType({
   name: 'Marca',
   title: 'Marca',
   type: 'document',

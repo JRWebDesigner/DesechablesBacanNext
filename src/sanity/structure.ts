@@ -6,8 +6,9 @@ export const structure: StructureResolver = (S) =>
     .title('Desechables Bacan Admin')
     .items([
       S.documentTypeListItem('Marca').title('Marca'),
+      S.documentTypeListItem('Producto').title('Producto'),
       S.divider(),
       ...S.documentTypeListItems().filter(
-        (item) => item.getId() && !['Marca'].includes(item.getId()!),
+        (item) => item.getId() && !['Marca','Producto'].includes(item.getId()!),
       ),
     ])

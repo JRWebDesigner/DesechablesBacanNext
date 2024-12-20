@@ -1,6 +1,6 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
 
-export const Products = defineType({
+export const Producto = defineType({
   name: 'Producto',
   title: 'Producto',
   type: 'document',
@@ -16,7 +16,7 @@ export const Products = defineType({
         {
           name: "alt",
           type: "string",
-          title: "Alternative Text",
+          title: "Texto alternativo",
           description: "Texto alternativo para la accesibilidad.",
         },
       ],
@@ -30,7 +30,7 @@ export const Products = defineType({
 			title: "Price",
 			type: "number",
 			description: "Precio del nuevo producto",
-			validation: (Rule) => Rule.positive().min(0).error("El precio debe ser un número positivo."),
+			
 		}),
 		defineField({
       name: "mark",

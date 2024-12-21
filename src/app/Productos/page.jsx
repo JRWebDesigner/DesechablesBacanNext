@@ -136,13 +136,15 @@
 //     </>
 //   );
 // }
-import { getProducts } from "../../sanity/sanity-utils";
+import { getProducts } from "../../sanity/lib/queries";
+import { sanityFetch } from "../../sanity/lib/fetch";
 import ProductosComp from "../../components/Products";
 
 export default async function productos() {
   try {
     console.log("Fetching products...");
-    const productos = await getProducts();
+    const query = getProducts();
+    const productos = await sanityFetch({ query });
     console.log("Fetched products:", productos);
     return (
       <div>

@@ -16,7 +16,7 @@ export async function sanityFetch<QueryResponse>({
   params?: QueryParams;
   tags?: string[];
 }): Promise<QueryResponse> {
-  const fetchOptions: QueryParams = {
+  const fetchOptions: QueryParams & { token?: string; tag?: string } = {
     ...params,
   };
 

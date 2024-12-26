@@ -10,7 +10,7 @@ export default function Carrito() {
   };
   const total=carrito.reduce((total, producto) => total + producto.price, 0)
   const messageP = carrito.map(producto => ` -${producto.name}%0A`).join('');
-  const message='Buenas,%20desearia%20estos%20productos%0A'+messageP;
+  const message='Buenas,%20desearia%20estos%20productos%0A'+messageP+'%0A Con un total de: '+total+' Bs.%20Gracias!';
   useEffect(() => {
     const translates = document.querySelectorAll('.translate-y-14');
     const scales = document.querySelectorAll('.scale-50');
@@ -74,7 +74,7 @@ export default function Carrito() {
       ) : (
         <ul className="space-y-4 w-[90%] m-auto">
           {carrito.map((producto) => (
-            <li key={producto.id} className="flex items-center justify-between border-b pb-4 duration-500 translate-y-14 mt-4">
+            <li key={producto._id} className="flex items-center justify-between border-b pb-4 duration-500 translate-y-14 mt-4">
               <div className="flex items-center gap-4">
                 <img
                   src={producto.img}

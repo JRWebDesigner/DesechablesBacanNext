@@ -136,20 +136,26 @@
 //     </>
 //   );
 // }
-import { getProducts } from "../../sanity/lib/queries";
-import { sanityFetch } from "../../sanity/lib/fetch";
-import ProductosComp from "../../components/Products";
+import { productsQuery } from "@/sanity/lib/queries";
+import { sanityFetch } from "@/sanity/lib/fetch";
+import ProductosComp from "@/components/Products";
+import { SanityDocument } from "next-sanity";
 
 export default async function productos() {
   try {
-    console.log("Fetching products...");
-    const query = getProducts();
-    const productos = await sanityFetch({ query });
-    console.log("Fetched products:", productos);
+    const productos = await sanityFetch<SanityDocument[]>({ query: productsQuery });
     return (
+      <div>
+    {productos && productos.length > 0 ? (
       <div>
         <ProductosComp productos={productos} />
       </div>
+    ) : (
+      <div>
+        <p>No hay productos</p>
+      </div>
+    )}
+  </div>
     );
   } catch (error) {
     console.error("Error in productos function:", error);

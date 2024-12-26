@@ -136,7 +136,7 @@
 //     </>
 //   );
 // }
-import { marksQuery, productsQuery } from "@/sanity/lib/queries";
+import { productsQuery } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import ProductosComp from "@/components/Products";
 import { SanityDocument } from "next-sanity";

@@ -1,6 +1,6 @@
 import ProductByMarks from "@/components/ProductByMarks";
 import { sanityFetch } from "@/sanity/lib/fetch";
-import { productsByMarkQuery, marksQuery, productsQuery } from "@/sanity/lib/queries";
+import { productsByMarkQuery, marksQuery, productsQuery } from "../../../sanity/lib/queries";
 
 export default async function ProductosMark({ params }) {
   const { slug } = params;

@@ -1,5 +1,5 @@
 import "server-only";
-
+//ayuda a que el codigo solo se ejecute en el servidor
 import type { QueryParams } from "@sanity/client";
 import { draftMode } from "next/headers";
 import { client } from "./client";

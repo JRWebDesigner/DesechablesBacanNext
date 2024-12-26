@@ -21,11 +21,11 @@ export async function sanityFetch<QueryResponse>({
   };
 
   if (token) {
-    fetchOptions.token = token;
+    (fetchOptions as any).token = token;
   }
 
   if (tags.length > 0) {
-    fetchOptions.tag = tags.join(",");
+    (fetchOptions as any).tag = tags.join(",");
   }
 
   return client.fetch(query, fetchOptions);

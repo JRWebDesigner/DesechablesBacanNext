@@ -25,7 +25,7 @@ export async function sanityFetch<QueryResponse>({
     );
   }
 
-  const fetchOptions: QueryParams = {
+  const fetchOptions: any = {
     ...params,
   };
 

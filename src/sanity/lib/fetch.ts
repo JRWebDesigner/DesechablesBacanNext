@@ -25,11 +25,17 @@ export async function sanityFetch<QueryResponse>({
     );
   }
 
-  const fetchOptions = {
-    params,
-    ...(isDraftMode && { token }),
-    ...(tags.length > 0 && { tag: tags.join(",") }),
+  const fetchOptions: QueryParams = {
+    ...params,
   };
+
+  if (isDraftMode) {
+    fetchOptions.token = token;
+  }
+
+  if (tags.length > 0) {
+    fetchOptions.tag = tags.join(",");
+  }
 
   return client.fetch(query, fetchOptions);
 }

@@ -77,7 +77,7 @@ export default function Carrito() {
             <li key={producto._id} className="flex items-center justify-between border-b pb-4 duration-500 translate-y-14 mt-4">
               <div className="flex items-center gap-4">
                 <img
-                  src={producto.img}
+                  src={producto.imageURL}
                   alt={producto.name}
                   className="w-16 h-16 object-cover rounded"
                 />

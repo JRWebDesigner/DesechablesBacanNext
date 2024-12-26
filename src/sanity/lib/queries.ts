@@ -12,21 +12,19 @@ export const productsQuery = groq`*[_type == "product"] {
   "imageURL": image.asset->url,
   }`;
 
-export const postsQuery = groq`*[_type == "post"] {
+export const marksQuery= groq`*[_type == "mark"] | order(_createdAt desc) {
+  _id,
   _createdAt,
-  title,
-  slug,
-  mainImage,
-  "imageURL": mainImage.asset->url,
-  "authorName": author->name,
+  name,
+  image,
+  "imageURL": image.asset->url,
 }`;
 
-// Get a single post by its slug
-export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{ 
-    title, description, mainImage, body
-  }`;
-
-// Get all post slugs
-export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
-    "params": { "slug": slug.current }
-  }`;
+export const productsByMarkQuery = `*[_type == "Producto" && mark == $mark] | order(_createdAt desc) {
+  _id,
+  name,
+  price,
+  mark,
+  description,
+  "image": image.asset->url
+}`;

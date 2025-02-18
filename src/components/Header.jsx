@@ -18,7 +18,7 @@ export default function Header() {
                 <nav className="border-gray-200 bg-black dark:border-gray-700 mx-auto">
                     <div className="max-w-screen-lg grid grid-cols-[2fr_5fr] md:flex flex-wrap items-center md:justify-around mx-auto p-4">
                         <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="/logo.png" className="h-28 md:h-36" alt="Flowbite Logo" />
+                            <img src="/logo.png" className="h-28" alt="Flowbite Logo" />
                         </Link>
                         <div className="flex items-center justify-end gap-6">
                         <Link href='/Carrito'>

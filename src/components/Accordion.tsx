@@ -1,5 +1,5 @@
 'use client';
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import {Accordion, AccordionItem} from "@heroui/accordion";
 import Link from "next/link";
 import { SanityDocument } from "next-sanity";
 
@@ -10,7 +10,7 @@ interface AccordionNavProps {
 export default function AccordionNav({ marcas }: AccordionNavProps) {
   return (
     <Accordion>
-      <AccordionItem key="1" aria-label="Accordion 1" title="Buscar por Marcas">
+      <AccordionItem key="1" aria-label="Accordion 1" title="Buscar por Tipos">
         <nav>
           <ul className="gap-4 overflow-y-scroll h-[170px] p-3">
             <li className="border-2 border-b-gray-200 hover:bg-blue-600 hover:text-white focus:bg-blue-600 before:text-white">
@@ -23,7 +23,7 @@ export default function AccordionNav({ marcas }: AccordionNavProps) {
                 </li>
               ))
             ) : (
-              <li className="text-center">No hay marcas disponibles</li>
+              <li className="text-center">No hay categorias disponibles</li>
             )}
           </ul>
         </nav>

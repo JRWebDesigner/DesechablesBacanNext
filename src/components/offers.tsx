@@ -24,7 +24,7 @@ export default function Offers(){
 				swiperslides.map((slide,index)=>(
 					<SwiperSlide key={index}>
 						<div className='max-h-[3000px] h-[60vh] flex justify-center items-center bg-blue-950'> 
-								<img className=' h-[90%]
+								<img className=' h-[80%]
 								md:h-full
 								' src
 								={slide} alt="oferta 1" />

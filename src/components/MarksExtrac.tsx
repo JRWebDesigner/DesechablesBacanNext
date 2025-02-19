@@ -1,11 +1,11 @@
 import { sanityFetch } from "@/sanity/lib/fetch"
-import { marksQuery } from "@/sanity/lib/queries"
+import { categoryQuery } from "@/sanity/lib/queries"
 import { SanityDocument } from "next-sanity";
 import AccordionNav from "./Accordion";
 
 export default async function Marks(){
-    const marks = await sanityFetch<SanityDocument[]>({ query: marksQuery });
+    const categorys = await sanityFetch<SanityDocument[]>({ query: categoryQuery });
     return (
-        <AccordionNav marcas={marks} />
+        <AccordionNav category={categorys} />
     )
 }

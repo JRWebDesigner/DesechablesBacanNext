@@ -1,12 +1,12 @@
 import ProductByMarks from "@/components/ProductByMarks";
 import { sanityFetch } from "@/sanity/lib/fetch";
-import { productsByMarkQuery, marksQuery, productsQuery } from "../../../sanity/lib/queries";
+import { productsByCategoryQuery, categoryQuery, productsQuery } from "../../../sanity/lib/queries";
 
 export default async function ProductosMark({ params }) {
   const { slug } = params;
   const marca = await sanityFetch({
-    query: productsByMarkQuery,
-    params: { mark: slug },
+    query: productsByCategoryQuery,
+    params: { category: slug },
   });
   const productos= await sanityFetch({ query: productsQuery });
   return (
@@ -18,7 +18,7 @@ export default async function ProductosMark({ params }) {
 }
 
 export async function generateStaticParams() {
-  const marcas = await sanityFetch({ query: marksQuery });
+  const marcas = await sanityFetch({ query: categoryQuery });
   return marcas.map((marca) => ({
     slug: marca.name,
   }));

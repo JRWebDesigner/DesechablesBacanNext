@@ -7,20 +7,19 @@ export const productsQuery = groq`*[_type == "product"] {
   slug,
   price,
   description,
+  category,
   mark,
   image,
   "imageURL": image.asset->url,
   }`;
 
-export const marksQuery= groq`*[_type == "mark"] | order(_createdAt desc) {
+export const categoryQuery= groq`*[_type == "category"] | order(_createdAt desc) {
   _id,
   _createdAt,
   name,
-  image,
-  "imageURL": image.asset->url,
 }`;
 
-export const productsByMarkQuery = `*[_type == "Producto" && mark == $mark] | order(_createdAt desc) {
+export const productsByCategoryQuery = `*[_type == "Producto" && category == $category] | order(_createdAt desc) {
   _id,
   name,
   price,

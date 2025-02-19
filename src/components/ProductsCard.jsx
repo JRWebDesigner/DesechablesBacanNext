@@ -1,6 +1,5 @@
 
 export default function ProductoCard({ product, openModal }) {
-  console.log(product);
     return (
       <div
         onClick={() => openModal(product)}

@@ -1,29 +1,33 @@
+import React, {useRef, useState} from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation} from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 export default function Offers(){
   let swiperslides=['/oferta.jpeg','/oferta.jpeg','/oferta.jpeg'];
-
   return (
     <Swiper
-    modules={[Navigation]}
-    spaceBetween={50}
-    slidesPerView={1}
-    navigation
-    onSwiper={(swiper) => console.log(swiper)}
-    onSlideChange={() => console.log('slide change')}
+    spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
     >
 			{
 				swiperslides.map((slide,index)=>(
 					<SwiperSlide key={index}>
-						<div className='max-h-[3000px] h-[60vh] flex justify-center items-center bg-blue-950'> 
+						<div className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-blue-950'> 
 								<img className=' h-[80%]
 								md:h-full
 								' src
@@ -32,7 +36,6 @@ export default function Offers(){
 					</SwiperSlide>
 				))
 			}
-      
     </Swiper>
   );
 };

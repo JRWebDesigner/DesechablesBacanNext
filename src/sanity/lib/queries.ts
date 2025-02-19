@@ -4,13 +4,11 @@ import { groq } from "next-sanity";
 export const productsQuery = groq`*[_type == "product"] {
   _id,
   name,
-  slug,
   price,
   description,
   category,
   mark,
-  image,
-  "imageURL": image.asset->url,
+  "image": image.asset->url
   }`;
 
 export const categoryQuery= groq`*[_type == "category"] | order(_createdAt desc) {
@@ -19,11 +17,18 @@ export const categoryQuery= groq`*[_type == "category"] | order(_createdAt desc)
   name,
 }`;
 
-export const productsByCategoryQuery = `*[_type == "Producto" && category == $category] | order(_createdAt desc) {
+export const productsByCategoryQuery = `*[_type == "product" && category == $category] | order(_createdAt desc) {
   _id,
   name,
   price,
+  category,
   mark,
   description,
+  "image": image.asset->url
+}`;
+
+export const offersQuery = groq`*[_type == "offers"] | order(_createdAt desc) {
+  _id,
+  descripcion,
   "image": image.asset->url
 }`;

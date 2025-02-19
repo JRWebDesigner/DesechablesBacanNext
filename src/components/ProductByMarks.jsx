@@ -6,7 +6,7 @@ import Modal from "./Modal";
 export default function ProductByMarks({ productos = [], marca }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-
+  console.log(marca)
   const openModal = (product) => {
     setSelectedProduct(product);
     setModalOpen(true);
@@ -16,8 +16,8 @@ export default function ProductByMarks({ productos = [], marca }) {
     setModalOpen(false);
     setSelectedProduct(null);
   };
-  const productosFiltrados = productos.filter((prod) => prod.mark.toUpperCase() === marca.toUpperCase());
-
+  const productosFiltrados = productos.filter((prod) => prod.category.toUpperCase() === marca.toUpperCase());
+  console.log(productos)
   return (
     <div>
       <div className="flex flex-wrap justify-center items-center gap-8 m-10">

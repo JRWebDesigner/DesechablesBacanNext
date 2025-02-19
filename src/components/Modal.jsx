@@ -18,7 +18,7 @@ export default function Modal({ product, closeModal }) {
           X
         </button>
       <img
-        src={product.imageURL}
+        src={product.image}
         alt={product.name}
         className="w-[300px] md:w-[500px] h-auto rounded"
       />

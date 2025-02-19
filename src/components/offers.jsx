@@ -1,4 +1,3 @@
-import React, {useRef, useState} from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation} from 'swiper/modules';
@@ -7,8 +6,7 @@ import { Autoplay, Pagination, Navigation} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 
-export default function Offers(){
-  let swiperslides=['/oferta.jpeg','/oferta.jpeg','/oferta.jpeg'];
+export default function Offers({ofertas}) {
   return (
     <Swiper
     spaceBetween={30}
@@ -24,18 +22,20 @@ export default function Offers(){
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
     >
-			{
-				swiperslides.map((slide,index)=>(
-					<SwiperSlide key={index}>
-						<div className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-blue-950'> 
-								<img className=' h-[80%]
-								md:h-full
-								' src
-								={slide} alt="oferta 1" />
-						</div>
-					</SwiperSlide>
-				))
-			}
+			{ofertas.length > 0 ? (
+        ofertas.map((oferta)=>(
+          <SwiperSlide key={oferta._id}>
+            <div className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-blue-950'> 
+                <img className=' h-[80%]
+                md:h-full
+                ' src
+                ={oferta.image} alt={oferta.description} />
+            </div>
+          </SwiperSlide>
+        ))
+      ) : (
+        <div className="text-center">No hay ofertas disponibles</div>
+      )}
     </Swiper>
   );
 };

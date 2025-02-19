@@ -1,7 +1,7 @@
 "use client"
+import CarouselOffers from '@/components/CarouselOffers';
 import Marks from '../components/Marks';
 import Carousel from "../components/PhotoCarousel";
-import Offers from '@/components/offers';
 import { useEffect } from 'react';
 export default function Home() {
   useEffect(() => {
@@ -59,13 +59,7 @@ export default function Home() {
 
   return (
     <>
-      <Offers />
-      {/* <section className="p-16 flex justify-center items-center flex-wrap gap-10 bg-blue-500 rounded-b-full">
-        <h1 className="inline text-center text-4xl font-black text-white">Desechables Bacan: Productos de Calidad para Todas tus Necesidades</h1>
-        <div className=" p-2 rounded-full flex justify-center items-center">
-          <img className="desch_image w-full h-full object-contain" src="/banner.png" alt="as" />
-        </div>
-      </section> */}
+      <CarouselOffers />
       
       <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
         Nuestras Marcas

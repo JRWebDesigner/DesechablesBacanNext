@@ -77,10 +77,10 @@ export default function Home() {
             Encuentra los mejores envases desechables en Desechables Bacán. Ofrecemos una amplia variedad de opciones ecológicas, resistentes y prácticas para alimentos. Ideales para negocios, eventos y uso personal. ¡Calidad y funcionalidad al mejor precio!
           </p>
         </div>
-      <Carousel />
+      <Carousel images={['/envase.jpeg']}/>
       </div>
       <div className="flex justify-center items-center flex-wrap-reverse p-16 gap-6">
-        <Carousel />
+        <Carousel images={['/vaso1.jpeg','/vaso2.jpeg','/vaso3.jpeg']}/>
         <div className="md:w-[40%] grid place-items-center">
           <h2 className="-translate-x-[30%] scale-50 text-center text-2xl font-bold duration-500 mt-20">
             Vasos
@@ -99,7 +99,7 @@ export default function Home() {
             Ofrecemos bolsas resistentes, practicas y en diferentes tamanos, idelaes para negocios, eventos y uso diario. <br /> Disponibles en variedad de materiales y colores. ¡Calidad y funcionalidad al mejor
           </p>
         </div>
-        <Carousel />
+        <Carousel images={['/bolsa1.jpeg','/bolsa2.jpeg','/bolsa3.jpg']} />
       </div>
     </>
   );

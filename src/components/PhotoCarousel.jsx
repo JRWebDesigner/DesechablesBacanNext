@@ -1,12 +1,12 @@
 "use client"
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function Carousel() {
+export default function Carousel({images}) {
     useEffect(() => {
         const translates = document.querySelectorAll('.translate-y-14');
         const scales = document.querySelectorAll('.scale-50');
@@ -61,24 +61,24 @@ export default function Carousel() {
       }, []);
     
   return (
-    <div className="w-[500px] scale-50 duration-500">
+    <div className="flex justify-center items-center w-[80%] md:w-[500px] scale-50 duration-500">
     <Swiper
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay]}
       navigation
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       pagination={{ clickable: true }}
       loop={true}
       spaceBetween={10}
       slidesPerView={1}
     >
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300" alt="Slide 1" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300/" alt="Slide 2" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src="https://via.placeholder.com/600x300/" alt="Slide 3" />
-      </SwiperSlide>
+     {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img className="w-full h-36 object-contain" src={image} alt={`Slide ${index + 1}`} />
+          </SwiperSlide>
+        ))}
     </Swiper>
     </div>
   );

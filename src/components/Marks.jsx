@@ -56,8 +56,8 @@ export default function Marks({categorys}){
     return(
         <div className='relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center justify-center m-auto gap-5 '>
             {categorys.map((category, index) => (
-                <div key={index} className='flex flex-col justify-center items-center'>
-                     <img src={category.image} alt={category.name} className='object-cover animation-pulse' /> 
+                <div key={index} className='flex flex-col justify-center items-center min-h-[150px]'>
+                     <img src={category.image} alt={category.name} className='object-cover animation-pulse max-h-[100px]' /> 
 
                     <div className='md:text-xl font-bold text-white uppercase text-center'>{category.name}</div>
                 </div>

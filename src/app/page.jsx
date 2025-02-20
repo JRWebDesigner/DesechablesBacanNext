@@ -62,7 +62,7 @@ export default function Home() {
       <CarouselOffers />
       
       <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
-        Nuestras Marcas
+        Nuestras Categorias
       </h2>
       <section className="marcs bg-black py-14 px-[10%] relative">
         <div className="absolute top-0 left-0 w-full h-full bg-[url(/background.avif)] bg-center bg-fixed opacity-20 z-0"></div>

@@ -61,16 +61,16 @@ export default function Home() {
     <>
       <CarouselOffers />
       
-      <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+      <h2 className="-translate-x-[30%] scale-50 text-center text-2xl font-bold duration-500 mt-20">
         Nuestras Categorias
       </h2>
-      <section className="marcs bg-black py-14 px-[10%] relative">
+      <section className="marcs bg-blue-950 py-14 px-[10%] relative">
         <div className="absolute top-0 left-0 w-full h-full bg-[url(/background.avif)] bg-center bg-fixed opacity-20 z-0"></div>
         <GetCategory />
       </section>
       <div className="flex justify-around items-center flex-wrap p-16 gap-6">
         <div className="md:w-[40%] grid place-items-center">
-          <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+          <h2 className="-translate-x-[30%] scale-50 text-center text-2xl font-bold duration-500 mt-20">
             Envases
           </h2>
           <p className="m-auto text-center">
@@ -82,7 +82,7 @@ export default function Home() {
       <div className="flex justify-center items-center flex-wrap-reverse p-16 gap-6">
         <Carousel />
         <div className="md:w-[40%] grid place-items-center">
-          <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+          <h2 className="-translate-x-[30%] scale-50 text-center text-2xl font-bold duration-500 mt-20">
             Vasos
           </h2>
           <p className="m-auto text-center">
@@ -92,11 +92,11 @@ export default function Home() {
       </div>
       <div className="flex justify-center items-center flex-wrap p-16 gap-6">
         <div className="md:w-[40%] grid place-items-center">
-          <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
+          <h2 className="-translate-x-[30%] scale-50 text-center text-2xl font-bold duration-500 mt-20">
             Bolsas
           </h2>
           <p className="m-auto text-center">
-            Bolsas desechables en Desechables Bacan. Ofrecemos bolsas resistentes, prácticas y en diferentes tamaños, ideales para negocios, eventos y uso diario. Disponibles en materiales ecológicos y biodegradables. ¡Calidad y funcionalidad garantizadas!
+            Ofrecemos bolsas resistentes, practicas y en diferentes tamanos, idelaes para negocios, eventos y uso diario. <br /> Disponibles en variedad de materiales y colores. ¡Calidad y funcionalidad al mejor
           </p>
         </div>
         <Carousel />

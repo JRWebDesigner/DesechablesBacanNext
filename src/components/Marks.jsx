@@ -55,7 +55,7 @@ export default function Marks(){
         };
       }, []);
     return(
-        <>
+        <div className='relative z-10 lg:grid grid-cols-5 lg:place-items-center flex justify-center flex-wrap m-auto gap-5'>
             <ImagesMarks 
                 name='Advan'
             />
@@ -86,6 +86,6 @@ export default function Marks(){
             <ImagesMarks 
                 name='SanJorge'
             />
-        </>
+        </div>
     )
 }

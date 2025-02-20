@@ -64,7 +64,8 @@ export default function Home() {
       <h2 className="-translate-x-[30%] scale-50 text-center text-3xl font-bold duration-500 mt-20">
         Nuestras Marcas
       </h2>
-      <section className="marcs lg:grid grid-cols-5 lg:place-items-center flex justify-center flex-wrap m-auto bg-gradient-to-t to-orange-600 from-yellow-400 py-14 gap-5 px-[10%]">
+      <section className="marcs bg-black py-14 px-[10%] relative">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url(/background.avif)] bg-center bg-fixed opacity-20 z-0"></div>
         <Marks />
       </section>
       <div className="flex justify-around items-center flex-wrap p-16 gap-6">

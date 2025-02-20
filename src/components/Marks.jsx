@@ -59,7 +59,7 @@ export default function Marks({categorys}){
                 <div key={index} className='flex flex-col justify-center items-center'>
                      <img src={category.image} alt={category.name} className='object-cover animation-pulse' /> 
 
-                    <div className=' text-xl font-bold text-white uppercase'>{category.name}</div>
+                    <div className='md:text-xl font-bold text-white uppercase text-center'>{category.name}</div>
                 </div>
               ))
             }

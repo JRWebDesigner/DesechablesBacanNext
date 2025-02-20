@@ -1,7 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import ImagesMarks from "./imagesMarks"
-export default function Marks(){
+export default function Marks({categorys}){
     useEffect(() => {
         const translates = document.querySelectorAll('.translate-y-14');
         const scales = document.querySelectorAll('.scale-50');
@@ -55,37 +54,15 @@ export default function Marks(){
         };
       }, []);
     return(
-        <div className='relative z-10 lg:grid grid-cols-5 lg:place-items-center flex justify-center flex-wrap m-auto gap-5'>
-            <ImagesMarks 
-                name='Advan'
-            />
-            <ImagesMarks 
-                name='Belen'
-            />
-            <ImagesMarks 
-                name='Darnel'
-            />
-            <ImagesMarks 
-                name='DelSur'
-            />
-            <ImagesMarks 
-                name='Docplast'
-            />
-            <ImagesMarks 
-                name='FiveStick'
-            />
-            <ImagesMarks 
-                name='Feiteng'
-            />
-            <ImagesMarks 
-                name='Isoplast'
-            />
-            <ImagesMarks 
-                name='PastenPlast'
-            />
-            <ImagesMarks 
-                name='SanJorge'
-            />
+        <div className='relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center justify-center m-auto gap-5 '>
+            {categorys.map((category, index) => (
+                <div key={index} className='flex flex-col justify-center items-center'>
+                     <img src={category.image} alt={category.name} className='object-cover animation-pulse' /> 
+
+                    <div className=' text-xl font-bold text-white uppercase'>{category.name}</div>
+                </div>
+              ))
+            }
         </div>
     )
 }

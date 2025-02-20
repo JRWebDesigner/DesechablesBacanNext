@@ -8,8 +8,7 @@ export const productType = defineType({
         {
         name: 'name',
         type: 'string',
-        },
-        
+        },  
         {
         name: 'image',
         type: 'image',

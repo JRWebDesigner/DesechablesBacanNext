@@ -15,6 +15,7 @@ export const categoryQuery= groq`*[_type == "category"] | order(_createdAt desc)
   _id,
   _createdAt,
   name,
+  "image": image.asset->url
 }`;
 
 export const productsByCategoryQuery = `*[_type == "product" && category == $category] | order(_createdAt desc) {

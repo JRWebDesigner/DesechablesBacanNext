@@ -1,8 +1,8 @@
 "use client"
 import CarouselOffers from '@/components/CarouselOffers';
-import Marks from '../components/Marks';
 import Carousel from "../components/PhotoCarousel";
 import { useEffect } from 'react';
+import GetCategory from '@/components/GetCategory';
 export default function Home() {
   useEffect(() => {
     const translates = document.querySelectorAll('.translate-y-14');
@@ -66,7 +66,7 @@ export default function Home() {
       </h2>
       <section className="marcs bg-black py-14 px-[10%] relative">
         <div className="absolute top-0 left-0 w-full h-full bg-[url(/background.avif)] bg-center bg-fixed opacity-20 z-0"></div>
-        <Marks />
+        <GetCategory />
       </section>
       <div className="flex justify-around items-center flex-wrap p-16 gap-6">
         <div className="md:w-[40%] grid place-items-center">

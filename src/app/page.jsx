@@ -3,6 +3,7 @@ import CarouselOffers from '@/components/CarouselOffers';
 import Carousel from "../components/PhotoCarousel";
 import { useEffect } from 'react';
 import GetCategory from '@/components/GetCategory';
+import NuestrasMarcas from '@/components/NuestrasMarcas';
 export default function Home() {
   useEffect(() => {
     const translates = document.querySelectorAll('.translate-y-14');
@@ -68,6 +69,16 @@ export default function Home() {
         <div className="absolute top-0 left-0 w-full h-full bg-[url(/background.avif)] bg-center bg-fixed opacity-20 z-0"></div>
         <GetCategory />
       </section>
+      <section>
+        <h2 className="-translate-x-[30%] scale-50 text-center text-2xl font-bold duration-500 mt-20">
+          Marcas con las que trabajamos
+        </h2>
+      <div>
+        <NuestrasMarcas />
+      </div>
+      </section>
+      
+
       <div className="flex justify-around items-center flex-wrap p-16 gap-6">
         <div className="md:w-[40%] grid place-items-center">
           <h2 className="-translate-x-[30%] scale-50 text-center text-2xl font-bold duration-500 mt-20">

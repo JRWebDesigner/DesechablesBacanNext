@@ -1,6 +1,9 @@
 "use client";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 export default function Marks({categorys}){
+  const router = useRouter();
     useEffect(() => {
         const translates = document.querySelectorAll('.translate-y-14');
         const scales = document.querySelectorAll('.scale-50');
@@ -53,10 +56,13 @@ export default function Marks({categorys}){
           observerSo.disconnect();
         };
       }, []);
+      const handleCategoryClick = (categoryName) => {
+        router.push(`/Productos/${encodeURIComponent(categoryName)}`);
+      };
     return(
         <div className='relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center justify-center m-auto gap-5'>
             {categorys.map((category, index) => (
-                <div key={index} className='flex flex-col justify-center items-center min-h-[150px] scale-50 duration-400'>
+                <div key={index} className='flex flex-col justify-center items-center min-h-[150px] scale-50 duration-400' onClick={() => handleCategoryClick(category.name)}>
                     <img src={category.image} alt={category.name} className='object-cover max-h-[100px] scale-50' /> 
                     <div className='md:text-xl font-bold text-white uppercase text-center'>{category.name}</div>
                 </div>

@@ -73,7 +73,7 @@ export default function ProductByMarks({ productos, category }) {
           ))
         ) : (
           <div className="text-center text-gray-500 py-10">
-            No se encontraron productos en la categoría "{category}".
+            No se encontraron productos en la categoría {category}.
           </div>
         )}
       </div>

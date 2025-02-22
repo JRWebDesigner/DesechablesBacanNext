@@ -25,7 +25,9 @@ export const productType = defineType({
         },
         {
             name:'category',
-            type: 'string',
+            type: 'reference',
+            to: [{ type: 'category' }],
+            title: 'Category',
         },
         {
             name:'mark',

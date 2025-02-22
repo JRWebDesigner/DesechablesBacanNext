@@ -10,6 +10,16 @@ export const categoryType = defineType({
         type: 'string',
         },
         {
+            name: 'slug',
+            type: 'slug',
+            title: 'Slug',
+            options: {
+              source: 'name', // Genera el slug a partir del campo `name`
+              maxLength: 200, // Longitud máxima del slug
+            },
+            validation: (Rule) => Rule.required(), // Asegura que el slug sea obligatorio
+        },
+        {
             name: 'image',
             type: 'image',
             options: {

@@ -1,12 +1,12 @@
 import { groq } from "next-sanity";
 
 // Get all posts
-export const productsQuery = groq`*[_type == "product"] {
+export const productsQuery = groq`*[_type == "product"] | order(_createdAt desc) {
   _id,
   name,
   price,
   description,
-  category,
+  "categoryName": category->name,
   mark,
   "image": image.asset->url
   }`;
@@ -15,14 +15,15 @@ export const categoryQuery= groq`*[_type == "category"] | order(_createdAt desc)
   _id,
   _createdAt,
   name,
+  "slug": slug.current,
   "image": image.asset->url
 }`;
 
-export const productsByCategoryQuery = `*[_type == "product" && category == $category] | order(_createdAt desc) {
+export const productsByCategoryQuery = groq`*[_type == "product" && category._ref == $category] | order(_createdAt desc) {
   _id,
   name,
   price,
-  category,
+  "categoryName": category->name,
   mark,
   description,
   "image": image.asset->url

@@ -24,7 +24,7 @@ export default function Modal({ product, closeModal }) {
       />
       <div className='w-[50%] max-w-[500px] min-w-[300px] flex justify-center items-center flex-col'>
       <h2 className="text-2xl font-bold mt-4">{product.name} ----- {product.price}Bs.</h2>
-      <small className="text-gray-700 mt-2 uppercase">{product.mark} ----- {product.category}</small>
+      <small className="text-gray-700 mt-2 uppercase">{product.mark} ----- {product.categoryName}</small>
       <div className="flex items-start flex-col w-full">
         <h3 className="font-bold">Descripción</h3>
         <p className="ml-2">

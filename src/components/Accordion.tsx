@@ -19,7 +19,7 @@ export default function AccordionNav({ category }: AccordionNavProps) {
             {category.length > 0 ? (
               category.map((c) => (
                 <li key={c._id} className="border-2 border-b-gray-200 hover:bg-blue-600 hover:text-white focus:bg-blue-600 before:text-white my-2 uppercase">
-                  <Link className="block" href={`/Productos/${c.name}`}>{c.name}</Link>
+                  <Link className="block" href={`/Productos/${c.slug}`}>{c.name}</Link>
                 </li>
               ))
             ) : (

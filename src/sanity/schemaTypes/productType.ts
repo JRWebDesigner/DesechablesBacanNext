@@ -10,24 +10,11 @@ export const productType = defineType({
             type: 'string',
         },  
         {
-            name: 'image',  // Cambiado de 'image' a 'images' (array)
-            type: 'array',
-            title: 'Image',
-            validation: Rule => Rule.max(3).error('Máximo 3 imágenes por producto'), // Límite de 3 imágenes
-            of: [{
-                type: 'images',
-                options: {
-                    hotspot: true,
-                },
-                fields: [
-                    {
-                        name: 'alt',
-                        type: 'string',
-                        title: 'Alternative text',
-                    }
-                ]
-            }]
-        },
+      name: 'image',  // ✅ Mantén el campo antiguo (para compatibilidad)
+      type: 'image',
+      options: { hotspot: true },
+      fields: [{ name: 'alt', type: 'string' }]
+    },
         {
             name: 'category',
             type: 'reference',

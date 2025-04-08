@@ -9,7 +9,7 @@ export const productsQuery = groq`*[_type == "product"] | order(_createdAt desc)
   description,
   "categoryName": category->name,
   mark,
-  "image": image.asset->url// Cambia de "image" a "images" (array)
+  "image": image.asset->url,// Cambia de "image" a "images" (array)
   "galleryImages": coalesce(galleryImages[].asset->url, [])
 }`;
 

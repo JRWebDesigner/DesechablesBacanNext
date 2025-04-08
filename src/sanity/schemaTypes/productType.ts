@@ -16,6 +16,17 @@ export const productType = defineType({
       fields: [{ name: 'alt', type: 'string' }]
     },
         {
+      name: 'images', // ✅ Nuevo campo (array de imágenes)
+      type: 'array',
+      title: 'Galería de imágenes (máx. 3)',
+      validation: Rule => Rule.max(3),
+      of: [{
+        type: 'image',
+        options: { hotspot: true },
+        fields: [{ name: 'alt', type: 'string' }]
+      }]
+        },
+        {
             name: 'category',
             type: 'reference',
             to: [{ type: 'category' }],
@@ -41,7 +52,7 @@ export const productType = defineType({
     preview: {
         select: {
             title: 'name',
-            media: 'image.0',  // Muestra la primera imagen del array en la vista previa
+            media: 'image',  // Muestra la primera imagen del array en la vista previa
         },
     },
 });

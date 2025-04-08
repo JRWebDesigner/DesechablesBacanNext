@@ -16,7 +16,7 @@ export const productType = defineType({
       fields: [{ name: 'alt', type: 'string' }]
     },
         {
-      name: 'images', // ✅ Nuevo campo (array de imágenes)
+      name: 'galleryImages', // ✅ Nuevo campo (array de imágenes)
       type: 'array',
       title: 'Galería de imágenes (máx. 3)',
       validation: Rule => Rule.max(3),

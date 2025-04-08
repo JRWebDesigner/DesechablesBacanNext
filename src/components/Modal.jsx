@@ -27,23 +27,21 @@ export default function Modal({ product, closeModal }) {
         
         {/* Carrusel Swiper */}
         <div className="w-[300px] md:w-[500px]">
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation
-            pagination={{ clickable: true }}
-            spaceBetween={20}
-            slidesPerView={1}
-          >
-            {product.images?.map((image, index) => (
-              <SwiperSlide key={index}>
-                <img
-                  src={image}
-                  alt={`${product.name} - Imagen ${index + 1}`}
-                  className="w-full h-auto rounded"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <Swiper>
+  {/* Muestra PRIMERO la imagen antigua (si no hay galleryImages) */}
+  {!product.galleryImages?.length && (
+    <SwiperSlide>
+      <img src={product.mainImage} alt={product.name} />
+    </SwiperSlide>
+  )}
+
+  {/* Muestra el array de imágenes nuevas (si existe) */}
+  {product.galleryImages?.map((img, idx) => (
+    <SwiperSlide key={idx}>
+      <img src={img} alt={`${product.name} - ${idx + 1}`} />
+    </SwiperSlide>
+  ))}
+</Swiper>
         </div>
 
         <div className='w-[50%] max-w-[500px] min-w-[300px] flex justify-center items-center flex-col'>

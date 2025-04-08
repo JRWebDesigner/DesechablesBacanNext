@@ -12,7 +12,7 @@ export const productType = defineType({
         {
             name: 'images',  // Cambiado de 'image' a 'images' (array)
             type: 'array',
-            title: 'Images',
+            title: 'Image',
             validation: Rule => Rule.max(3).error('Máximo 3 imágenes por producto'), // Límite de 3 imágenes
             of: [{
                 type: 'image',

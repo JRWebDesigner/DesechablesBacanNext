@@ -28,14 +28,12 @@ export default function Modal({ product, closeModal }) {
         {/* Carrusel Swiper */}
         <div className="w-[300px] md:w-[500px]">
           <Swiper>
-  {/* Muestra PRIMERO la imagen antigua (si no hay galleryImages) */}
-  {!product.galleryImages?.length && (
-    <SwiperSlide>
-      <img src={product.image} alt={product.name} />
-    </SwiperSlide>
-  )}
+  {/* Imagen principal SIEMPRE (primera slide) */}
+  <SwiperSlide>
+    <img src={product.image} alt={product.name} />
+  </SwiperSlide>
 
-  {/* Muestra el array de imágenes nuevas (si existe) */}
+  {/* Galería adicional (si existe) */}
   {product.galleryImages?.map((img, idx) => (
     <SwiperSlide key={idx}>
       <img src={img} alt={`${product.name} - ${idx + 1}`} />

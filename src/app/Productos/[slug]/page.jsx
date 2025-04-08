@@ -50,7 +50,7 @@ const productsByCategoryQuery = groq`*[_type == "product" && category->slug.curr
   description,
   "categoryName": category->name,
   mark,
-  "mainImage": image.asset->url,  // Campo singular
+  "image": image.asset->url,  // Campo singular
   "galleryImages": images[].asset->url  // Campo array
 }`;
 

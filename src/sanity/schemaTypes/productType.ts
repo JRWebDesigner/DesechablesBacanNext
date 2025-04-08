@@ -10,12 +10,12 @@ export const productType = defineType({
             type: 'string',
         },  
         {
-            name: 'images',  // Cambiado de 'image' a 'images' (array)
+            name: 'image',  // Cambiado de 'image' a 'images' (array)
             type: 'array',
             title: 'Image',
             validation: Rule => Rule.max(3).error('Máximo 3 imágenes por producto'), // Límite de 3 imágenes
             of: [{
-                type: 'image',
+                type: 'images',
                 options: {
                     hotspot: true,
                 },
@@ -54,7 +54,7 @@ export const productType = defineType({
     preview: {
         select: {
             title: 'name',
-            media: 'images.0',  // Muestra la primera imagen del array en la vista previa
+            media: 'image.0',  // Muestra la primera imagen del array en la vista previa
         },
     },
 });

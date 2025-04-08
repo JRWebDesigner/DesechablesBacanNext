@@ -20,7 +20,7 @@ export default function Modal({ product, closeModal }) {
       <div className="w-[90%] md:w-auto relative bg-white p-6 rounded-lg shadow-lg flex flex-wrap md:flex-nowrap justify-center items-center min-h-[430px] gap-8">
         <button
           onClick={closeModal}
-          className="bg-gray-200 top-2 right-2 text-2xl px-4 py-2 rounded-full hover:bg-red-600 absolute hover:text-white"
+          className="z-50 bg-gray-200 top-2 right-2 text-2xl px-4 py-2 rounded-full hover:bg-red-600 absolute hover:text-white"
         >
           X
         </button>

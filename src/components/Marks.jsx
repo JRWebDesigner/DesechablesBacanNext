@@ -57,7 +57,8 @@ export default function Marks({categorys}){
         };
       }, []);
       const handleCategoryClick = (categoryName) => {
-        router.push(`/Productos/${encodeURIComponent(categoryName)}`);
+        const formattedName = categoryName.toLowerCase().replace(/\s+/g, '-');
+        router.push(`/Productos/${formattedName}`);
       };
     return(
         <div className='relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center justify-center m-auto gap-5'>

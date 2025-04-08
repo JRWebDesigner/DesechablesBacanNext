@@ -8,8 +8,8 @@ export const productsQuery = groq`*[_type == "product"] | order(_createdAt desc)
   description,
   "categoryName": category->name,
   mark,
-  "image": image.asset->url
-  }`;
+  "images": images[].asset->url  // Cambia de "image" a "images" (array)
+}`;
 
 export const categoryQuery= groq`*[_type == "category"] | order(_createdAt desc) {
   _id,

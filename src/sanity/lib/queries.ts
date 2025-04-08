@@ -10,6 +10,7 @@ export const productsQuery = groq`*[_type == "product"] | order(_createdAt desc)
   "categoryName": category->name,
   mark,
   "image": image.asset->url// Cambia de "image" a "images" (array)
+  "galleryImages": galleryImages[].asset->url  // Array para el carrusel (nuevo campo)
 }`;
 
 export const categoryQuery= groq`*[_type == "category"] | order(_createdAt desc) {

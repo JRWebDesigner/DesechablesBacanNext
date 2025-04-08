@@ -6,32 +6,41 @@ export const productType = defineType({
     type: 'document',
     fields: [
         {
-        name: 'name',
-        type: 'string',
+            name: 'name',
+            type: 'string',
         },  
         {
-        name: 'image',
-        type: 'image',
-        options: {
-            hotspot: true,
-        },
-        fields: [
-            {
-            name: 'alt',
-            type: 'string',
-            title: 'Alternative text',
-            }
-        ]
+            name: 'images',  // Cambiado de 'image' a 'images' (array)
+            type: 'array',
+            title: 'Images',
+            validation: Rule => Rule.max(3).error('Máximo 3 imágenes por producto'), // Límite de 3 imágenes
+            of: [{
+                type: 'image',
+                options: {
+                    hotspot: true,
+                },
+                fields: [
+                    {
+                        name: 'alt',
+                        type: 'string',
+                        title: 'Alternative text',
+                    }
+                ]
+            }]
         },
         {
-            name:'category',
+            name: 'category',
             type: 'reference',
             to: [{ type: 'category' }],
             title: 'Category',
         },
         {
-            name:'mark',
+            name: 'mark',
             type: 'string',
+        },
+        {
+            name: 'xmayor',
+            type: 'number',
         },
         {
             name: 'price',
@@ -44,8 +53,8 @@ export const productType = defineType({
     ],
     preview: {
         select: {
-        title: 'name',
-        media: 'image',
+            title: 'name',
+            media: 'images.0',  // Muestra la primera imagen del array en la vista previa
         },
     },
-})
+});

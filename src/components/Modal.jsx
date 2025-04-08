@@ -31,7 +31,7 @@ export default function Modal({ product, closeModal }) {
   {/* Muestra PRIMERO la imagen antigua (si no hay galleryImages) */}
   {!product.galleryImages?.length && (
     <SwiperSlide>
-      <img src={product.mainImage} alt={product.name} />
+      <img src={product.image} alt={product.name} />
     </SwiperSlide>
   )}
 

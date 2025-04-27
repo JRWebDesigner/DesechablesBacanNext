@@ -26,7 +26,7 @@ export default function Offers({ofertas}) {
 			{ofertas.length > 0 ? (
         ofertas.map((oferta)=>(
           <SwiperSlide key={oferta._id}>
-            <Link href={`/Productod/#${oferta.descripcion}`}  className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500'> 
+            <Link href={`/Productos/#${oferta.descripcion}`}  className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500'> 
                 <img className=' h-[80%]
                 md:h-full
                 ' src

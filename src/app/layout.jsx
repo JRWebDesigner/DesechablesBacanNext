@@ -18,7 +18,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Desechables Bacan",
-  description: "",
+  description: "¿Necesitas desechables de calidad para tu restaurante o fiesta? En Desechables Bacán tenemos todo lo que buscas al mejor precio. 📦 Despachos a todo el país. ¡Cotiza hoy mismo",
 };
 
 export default function RootLayout({ children }) {

@@ -1,39 +1,34 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation} from 'swiper/modules';
+
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import { useRouter } from 'next/router'; // Importa useRouter
 
-export default function Offers({ ofertas }) {
-  const router = useRouter(); // Inicializa el router
-
+export default function Offers({ofertas}) {
   return (
     <Swiper
-      spaceBetween={30}
-      centeredSlides={true}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      pagination={{
-        clickable: true,
-      }}
-      navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
+    spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
     >
-      {ofertas.length > 0 ? (
-        ofertas.map((oferta) => (
+			{ofertas.length > 0 ? (
+        ofertas.map((oferta)=>(
           <SwiperSlide key={oferta._id}>
-            <div 
-              onClick={() => router.push(`/productos/${oferta.descripcion}`)} // Redirige al ID del producto
-              className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500 cursor-pointer'
-            >
-              <img 
-                className='h-[80%] md:h-full' 
-                src={oferta.image} 
-                alt="ofertas" 
-              />
+            <div className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500'> 
+                <img className=' h-[80%]
+                md:h-full
+                ' src
+                ={oferta.image} alt="ofertas" />
             </div>
           </SwiperSlide>
         ))
@@ -42,4 +37,4 @@ export default function Offers({ ofertas }) {
       )}
     </Swiper>
   );
-}
+};

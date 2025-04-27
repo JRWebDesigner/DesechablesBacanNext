@@ -45,7 +45,7 @@ export default function Modal({ product, closeModal }) {
 
         {/* Contenedor de información con scroll si es necesario */}
         <div className='w-full max-w-[500px] min-w-[300px] flex justify-center items-center flex-col overflow-y-auto'>
-          <h2 className="text-2xl font-bold mt-4 text-center">{product.name} ----- {product.price}Bs.</h2>
+          <h2 className="text-lg md:text-2xl font-bold mt-4 text-center">{product.name} ----- {product.price}Bs.</h2>
           <small className="text-gray-700 mt-2 uppercase text-center">{product.mark} ----- {product.categoryName}</small>
           <div className="flex items-start flex-col w-full mt-4">
             <h3 className="font-bold">Descripción</h3>

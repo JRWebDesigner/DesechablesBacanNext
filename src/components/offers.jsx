@@ -1,37 +1,40 @@
-// Import Swiper React components
-import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation} from 'swiper/modules';
-
-// Import Swiper styles
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
+import { useRouter } from 'next/router'; // Importa useRouter
 
-export default function Offers({ofertas}) {
+export default function Offers({ ofertas }) {
+  const router = useRouter(); // Inicializa el router
+
   return (
     <Swiper
-    spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper"
     >
-			{ofertas.length > 0 ? (
-        ofertas.map((oferta)=>(
+      {ofertas.length > 0 ? (
+        ofertas.map((oferta) => (
           <SwiperSlide key={oferta._id}>
-            <Link href={`/Productos/#${oferta.descripcion}`}  className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500'> 
-                <img className=' h-[80%]
-                md:h-full
-                ' src
-                ={oferta.image} alt={oferta.description} />
-            </Link>
+            <div 
+              onClick={() => router.push(`/productos/${oferta.descripcion}`)} // Redirige al ID del producto
+              className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500 cursor-pointer'
+            >
+              <img 
+                className='h-[80%] md:h-full' 
+                src={oferta.image} 
+                alt="ofertas" 
+              />
+            </div>
           </SwiperSlide>
         ))
       ) : (
@@ -39,4 +42,4 @@ export default function Offers({ofertas}) {
       )}
     </Swiper>
   );
-};
+}

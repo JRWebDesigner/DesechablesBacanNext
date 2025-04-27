@@ -32,7 +32,7 @@ export const productsByCategoryQuery = groq`*[_type == "product" && category._re
 }`;
 
 export const offersQuery = groq`*[_type == "offers"] | order(_createdAt desc) {
-  _id,
-  descripcion,
-  "image": image.asset->url
+      _id,
+      imagen,
+      "descripcion": producto._ref
 }`;

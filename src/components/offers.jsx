@@ -1,4 +1,5 @@
 // Import Swiper React components
+import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation} from 'swiper/modules';
 
@@ -25,12 +26,12 @@ export default function Offers({ofertas}) {
 			{ofertas.length > 0 ? (
         ofertas.map((oferta)=>(
           <SwiperSlide key={oferta._id}>
-            <div className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500'> 
+            <Link href={`/producto/${oferta.descripcion}`}  className='max-h-[3000px] h-[80vh] flex justify-center items-center bg-orange-500'> 
                 <img className=' h-[80%]
                 md:h-full
                 ' src
                 ={oferta.image} alt={oferta.description} />
-            </div>
+            </Link>
           </SwiperSlide>
         ))
       ) : (

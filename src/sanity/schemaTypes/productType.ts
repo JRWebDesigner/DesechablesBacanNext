@@ -37,10 +37,6 @@ export const productType = defineType({
             type: 'string',
         },
         {
-            name: 'xmayor',
-            type: 'number',
-        },
-        {
             name: 'price',
             type: 'number',
         },

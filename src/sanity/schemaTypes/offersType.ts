@@ -28,7 +28,6 @@ export const offersType = defineType({
     ],
     preview: {
         select: {
-        title: 'descripcion',
         media: 'image',
         },
     },

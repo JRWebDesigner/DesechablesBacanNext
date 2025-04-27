@@ -2,6 +2,7 @@
 export default function ProductoCard({ product, openModal }) {
     return (
       <div
+          id={product._id} 
         onClick={() => openModal(product)}
         className="flex flex-col justify-center items-center shadow-xl w-[240px] p-4 text-xl font-bold gap-3 rounded-3xl hover:scale-[1.05] hover:bg-gray-100 duration-500  cursor-pointer"
       >

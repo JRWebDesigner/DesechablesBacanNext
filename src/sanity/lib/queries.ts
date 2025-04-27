@@ -5,7 +5,6 @@ export const productsQuery = groq`*[_type == "product"] | order(_createdAt desc)
   _id,
   name,
   price,
-  xmayor,
   description,
   "categoryName": category->name,
   mark,

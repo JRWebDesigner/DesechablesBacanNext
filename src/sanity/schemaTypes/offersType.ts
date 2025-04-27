@@ -7,7 +7,6 @@ export const offersType = defineType({
     fields: [
         {
         name: 'descripcion',
-        title: 'Producto en Oferta',
         type: 'string',
         },
         {

@@ -7,6 +7,7 @@ export const offersType = defineType({
     fields: [
         {
         name: 'descripcion',
+        title:'Producto en promoción',
         type: 'reference',
          to: [{ type: 'product' }],
          validation: Rule => Rule.required()
@@ -28,6 +29,7 @@ export const offersType = defineType({
     ],
     preview: {
         select: {
+        title: 'descripcion.title',
         media: 'image',
         },
     },
